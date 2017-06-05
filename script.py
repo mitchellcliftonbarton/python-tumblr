@@ -19,13 +19,12 @@ client.info()
 #same folder where your script is saved.
 #From yourBlogName.tumblr.com should just use 'yourBlogName'
 #The default state is set to "queue", to publish use "published"
-# rootdir = 'C:/Users/mitchell/Workspace/tumblr-python/images'
 
 for filename in os.listdir('images/'):
     if filename.endswith(".jpg"):
         # print(os.path.join(directory, filename))
         print('images/' + filename)
-        client.create_photo('black-sand-white-sand-grey-sand', state="published", tags=["testing", "ok"], data='images/' + filename)
+        client.create_photo('black-sand-white-sand-grey-sand', state="published", data='images/' + filename)
         # continue
     else:
         print('poop')
